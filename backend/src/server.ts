@@ -135,8 +135,12 @@ const startServer = async () => {
 ⏰ Article age limit: 24 hours maximum
 📊 Database: Connected
 🔴 Redis: Connected
+🔧 Job Schedulers: Active
+   - Aggregation (30-min adaptive cycle)
+   - Cleanup (daily at 2 AM)
+   - Health Check (hourly)
 
-Ready to serve intelligence operations.
+✅ All systems operational - Ready to serve intelligence operations.
       `);
     });
 
