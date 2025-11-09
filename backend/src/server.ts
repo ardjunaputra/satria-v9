@@ -79,32 +79,13 @@ app.get('/health', (req, res) => {
 // API Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/articles', articleRoutes);
+app.use('/api/searches', searchRoutes);
+app.use('/api/alerts', alertRoutes);
+app.use('/api/admin', adminRoutes);
+app.use('/api/users', userRoutes);
 
-// WebSocket authentication middleware
-io.use((socket, next) => {
-  const token = socket.handshake.auth.token;
-
-  if (!token) {
-    return next(new Error('Authentication required'));
-  }
-
-  // In production, verify JWT token here
-  // For now, allow connection
-  next();
-});
-
-// WebSocket connection handling
-io.on('connection', (socket) => {
-  logger.info(`WebSocket client connected: ${socket.id}`);
-
-  socket.on('disconnect', () => {
-    logger.info(`WebSocket client disconnected: ${socket.id}`);
-  });
-
-  socket.on('error', (error) => {
-    logger.error('WebSocket error:', error);
-  });
-});
+// Setup WebSocket handlers
+setupWebSocketHandlers(io);
 
 // Export io for use in other services
 export { io };
