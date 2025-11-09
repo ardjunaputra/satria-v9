@@ -103,6 +103,13 @@ const startServer = async () => {
     // Connect to Redis
     await connectRedis();
 
+    // Start job schedulers
+    logger.info('🔧 Initializing job schedulers...');
+    await aggregationJob.start();
+    await cleanupJob.start();
+    await healthCheckJob.start();
+    logger.info('✅ All job schedulers started');
+
     // Start listening
     server.listen(PORT, () => {
       logger.info(`
