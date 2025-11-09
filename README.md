@@ -90,6 +90,7 @@ docker-compose exec postgres psql -U satria_user -d satria_db -f /docker-entrypo
 ```
 
 The system will be available at:
+- Frontend UI: http://localhost:3000
 - Backend API: http://localhost:5000
 - PostgreSQL: localhost:5432
 - Redis: localhost:6379
