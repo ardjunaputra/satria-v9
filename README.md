@@ -200,14 +200,17 @@ Password: Admin@123456
 - `POST /api/articles/:id/flag` - Flag article for review
 - `DELETE /api/articles/:id/flag` - Remove flag from article
 
-## 🎨 User Interface Features (To Be Implemented)
+## 🎨 User Interface Features
 
-- **Card Grid Dashboard** - 2-column responsive layout
-- **Real-time Notifications** - Toast, banner, and sound alerts
-- **Advanced Filtering** - Multi-select categories, regions, sources
-- **Saved Searches** - Personal and shared search configurations
-- **Alert Rules** - Custom notification triggers
-- **Report Generation** - Export and analysis tools
+- **Card Grid Dashboard** - Responsive 3-column layout with real-time updates
+- **Real-time Notifications** - WebSocket-powered toast, banner, and sound alerts
+- **Advanced Filtering** - Multi-select categories, regions, sources, priority, and time range
+- **Saved Searches** - Personal search configurations with quick access
+- **Alert Rules** - Custom notification triggers with criteria matching
+- **Article Management** - Read tracking, flagging, and detail modal views
+- **Multi-Factor Authentication** - TOTP-based 2FA with QR code setup
+- **Admin Panel** - System monitoring, user management, and source configuration
+- **Settings** - Profile management, password change, and notification preferences
 
 ## 🔄 Data Aggregation
 
