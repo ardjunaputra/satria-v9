@@ -10,6 +10,8 @@ import { logger } from '../../utils/logger';
 import { RawArticle, SourceFetchResult, AggregationResult } from '../../types';
 import { AGGREGATION_CONFIG, DEFAULT_KEYWORDS } from '../../config/constants';
 import { Op } from 'sequelize';
+import { io } from '../../server';
+import { emitNewArticle } from '../../websocket/socketHandler';
 
 class AggregatorService {
   private isRunning: boolean = false;
