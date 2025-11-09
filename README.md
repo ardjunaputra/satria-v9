@@ -261,8 +261,9 @@ The system uses PostgreSQL with 11 tables:
 
 ## 🔧 Development
 
+### Backend
+
 ```bash
-# Install dependencies
 cd backend
 npm install
 
@@ -275,8 +276,24 @@ npm run typecheck
 # Build for production
 npm run build
 
-# Run tests
-npm test
+# Lint code
+npm run lint
+```
+
+### Frontend
+
+```bash
+cd frontend
+npm install
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
 
 # Lint code
 npm run lint
