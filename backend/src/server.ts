@@ -21,6 +21,18 @@ import { apiLimiter } from './middleware/rateLimiter';
 // Import routes
 import authRoutes from './routes/auth';
 import articleRoutes from './routes/articles';
+import searchRoutes from './routes/searches';
+import alertRoutes from './routes/alerts';
+import adminRoutes from './routes/admin';
+import userRoutes from './routes/users';
+
+// Import WebSocket handler
+import setupWebSocketHandlers from './websocket/socketHandler';
+
+// Import jobs
+import aggregationJob from './jobs/aggregationJob';
+import cleanupJob from './jobs/cleanupJob';
+import healthCheckJob from './jobs/healthCheckJob';
 
 // Initialize Express app
 const app: Application = express();
