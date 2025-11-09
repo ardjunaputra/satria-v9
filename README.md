@@ -77,6 +77,7 @@ cd satria-v9
 
 # 2. Set up environment variables
 cp backend/.env.example backend/.env
+cp frontend/.env.example frontend/.env
 # Edit backend/.env with your API keys
 
 # 3. Start all services
